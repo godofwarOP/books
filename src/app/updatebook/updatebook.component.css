@@ -1,0 +1,96 @@
+.updateBook__fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary);
+}
+
+.updateBook__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.updateBook__container {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: black;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  animation: load 500ms ease;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.updateBook__container .title h1 {
+  text-align: center;
+}
+
+.updateBook__container form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateBook__container form label {
+  font-size: 1.2rem;
+  margin: 0.5rem 0rem;
+}
+
+.updateBook__container form input {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: calc(var(--border-radius) - 7px);
+}
+
+.updateBook__container .error {
+  margin: 0.5rem 0rem;
+  color: #ed4245;
+  font-weight: 300;
+}
+
+.updateBook__container .operations {
+  margin-top: 1rem;
+  padding: 1rem 0rem;
+  border-top: 2px solid var(--primary);
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.updateBook__container .btn--save {
+  color: #fff;
+  background-color: #57f287;
+  width: fit-content;
+  align-self: center;
+}
+
+.updateBook__container .btn--clear {
+  color: #fff;
+  background-color: #ed4245;
+  width: fit-content;
+  align-self: center;
+}

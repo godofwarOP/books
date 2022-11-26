@@ -1,0 +1,90 @@
+<div class="books">
+  <div class="title">
+    <h1>Total Books({{ state.data.length }})</h1>
+    <div class="dropdown">
+      <div class="dropdown__container">
+        <button class="btn btn--sort" type="button">Sort</button>
+        <div class="dropdown__list">
+          <div class="dropdown__list__container">
+            <ul class="dropdown--list">
+              <p>Sort By</p>
+              <li
+                [class.dropdown--item__active]="
+                  bookService.state.sort === 'releaseDate'
+                "
+                (click)="sortByDate()"
+                class="dropdown--item"
+              >
+                Date
+              </li>
+              <li
+                [class.dropdown--item__active]="
+                  bookService.state.sort === 'title'
+                "
+                (click)="sortByTitle()"
+                class="dropdown--item"
+              >
+                Title
+              </li>
+              <li
+                [class.dropdown--item__active]="
+                  bookService.state.sort === 'author'
+                "
+                (click)="sortByAuthor()"
+                class="dropdown--item"
+              >
+                Author
+              </li>
+            </ul>
+            <ul class="dropdown--list">
+              <p>Order By</p>
+              <li
+                [class.dropdown--item__active]="
+                  bookService.state.order === 'asc'
+                "
+                (click)="orderByAsc()"
+                class="dropdown--item"
+              >
+                Asc
+              </li>
+              <li
+                [class.dropdown--item__active]="
+                  bookService.state.order === 'desc'
+                "
+                (click)="orderByDesc()"
+                class="dropdown--item"
+              >
+                Desc
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spinner__container" *ngIf="state.isLoading; else books">
+    <app-spinner></app-spinner>
+  </div>
+
+  <div class="error" *ngIf="state.data.length === 0">
+    <h1>No Books Found!</h1>
+  </div>
+
+  <ng-template #books>
+    <div class="books__container">
+      <a
+        *ngFor="let book of state.data"
+        [routerLink]="['/book', book.id]"
+        class="book"
+      >
+        <div>
+          <img src="{{ book.coverUrl }}" alt="{{ book.title }}" />
+        </div>
+        <div class="book__metadata">
+          <h1>{{ book.title }}</h1>
+        </div>
+      </a>
+    </div>
+  </ng-template>
+</div>

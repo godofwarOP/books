@@ -1,0 +1,81 @@
+{
+  "books": [
+    {
+      "title": "Theory of Everything",
+      "author": "Albert Einstein",
+      "releaseDate": "2002-05-15T00:00:00.000Z",
+      "coverUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415359670l/449573.jpg",
+      "id": 1
+    },
+    {
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "releaseDate": "2017-04-11T00:00:00.000Z",
+      "coverUrl": "https://images-na.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SX330_BO1,204,203,200_.jpg",
+      "id": 2
+    },
+    {
+      "title": "Good Omens",
+      "author": "Neil Gaiman",
+      "releaseDate": "1990-05-10T00:00:00.000Z",
+      "coverUrl": "https://upload.wikimedia.org/wikipedia/en/0/0a/Goodomenscover.jpg",
+      "id": 3
+    },
+    {
+      "title": "Four Past Midnight",
+      "author": "Stephen King",
+      "releaseDate": "1990-09-24T00:00:00.000Z",
+      "coverUrl": "https://upload.wikimedia.org/wikipedia/en/4/41/FourPastMidnight.jpg",
+      "id": 4
+    },
+    {
+      "title": "Omeros",
+      "author": "Derek Walcott",
+      "releaseDate": "1990-01-01T00:00:00.000Z",
+      "coverUrl": "https://upload.wikimedia.org/wikipedia/en/2/2a/Omerosbook.jpg",
+      "id": 5
+    }
+  ],
+  "heroes": [
+    {
+      "id": 12,
+      "name": "Dr. Nice"
+    },
+    {
+      "id": 13,
+      "name": "Bombasto"
+    },
+    {
+      "id": 14,
+      "name": "Celeritas"
+    },
+    {
+      "id": 15,
+      "name": "Magneta"
+    },
+    {
+      "id": 16,
+      "name": "RubberMan"
+    },
+    {
+      "id": 17,
+      "name": "Dynama"
+    },
+    {
+      "id": 18,
+      "name": "Dr. IQ"
+    },
+    {
+      "id": 19,
+      "name": "Magma"
+    },
+    {
+      "id": 20,
+      "name": "Tornado"
+    },
+    {
+      "name": "Shaktiman",
+      "id": 21
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+.book__container {
+  margin-top: 2rem;
+  background-color: var(--secondary);
+  color: black;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  animation: load 500ms ease;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.book .cover img {
+  width: 20rem;
+  aspect-ratio: 1 / 1;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.book .data {
+  flex: 1;
+  border-left: 2px solid var(--primary);
+  padding: 1rem;
+}
+
+.book .data .title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 1rem;
+}
+
+.book .data .author {
+  margin: 0.5rem 0rem;
+}
+
+.book .data .author a {
+  font-size: 1.1rem;
+}
+
+.book .data .author a span {
+  color: var(--primary);
+}
+
+.book .data .author a:hover {
+  text-decoration: underline;
+}
+
+.book .data .release .date {
+  color: var(--primary);
+}
+
+.operations {
+  border-top: 2px solid var(--primary);
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.operations .btn--delete {
+  background-color: #ed4245;
+}
+
+.operations .btn--update {
+  background-color: #57f287;
+}
+
+.operations .btn--share {
+  background-color: #5865f2;
+}

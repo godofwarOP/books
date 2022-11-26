@@ -1,0 +1,56 @@
+.addbook__container {
+  margin-top: 2rem;
+  background-color: var(--secondary);
+  color: black;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.addbook__container .title {
+  text-align: center;
+}
+
+.addbook__container form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.addbook__container form label {
+  font-size: 1.2rem;
+  margin: 0.5rem 0rem;
+}
+
+.addbook__container form input {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: calc(var(--border-radius) - 7px);
+}
+
+.addbook__container .operations {
+  margin-top: 1rem;
+  padding: 1rem 0rem;
+  border-top: 2px solid var(--primary);
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.addbook__container .btn--save {
+  color: #fff;
+  background-color: #57f287;
+  width: fit-content;
+  align-self: center;
+}
+
+.addbook__container .btn--clear {
+  color: #fff;
+  background-color: #ed4245;
+  width: fit-content;
+  align-self: center;
+}
+
+.error {
+  border: 2px solid #ed4245 !important;
+}

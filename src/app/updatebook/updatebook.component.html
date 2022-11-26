@@ -1,0 +1,99 @@
+<div class="updateBook__fixed">
+  <div class="updateBook__overlay" (click)="closeUpdateModal()"></div>
+  <div class="updateBook__container">
+    <div class="title">
+      <h1>Update Book</h1>
+    </div>
+
+    <div class="updateBook__form">
+      <form [formGroup]="bookData">
+        <div>
+          <label for="title">Book Title</label>
+          <input
+            formControlName="title"
+            type="text"
+            name="title"
+            placeholder="{{ book.title }}"
+          />
+        </div>
+
+        <div>
+          <label for="author">Book Author</label>
+          <input
+            formControlName="author"
+            type="text"
+            name="author"
+            placeholder="{{ book.author }}"
+          />
+        </div>
+
+        <div>
+          <label for="release">Book Release Date</label>
+          <input
+            formControlName="releaseDate"
+            type="text"
+            onfocus="(this.type = 'date')"
+            name="release"
+            placeholder="{{ book.releaseDate }}"
+          />
+        </div>
+
+        <div>
+          <label for="cover">Book Cover Url</label>
+          <input
+            formControlName="coverUrl"
+            type="url"
+            name="cover"
+            placeholder="{{ book.coverUrl }}"
+          />
+        </div>
+
+        <div *ngIf="bookData.errors?.['required']" class="error">
+          <p>{{ bookData.errors?.['required'].message }}</p>
+        </div>
+
+        <div class="operations">
+          <button
+            (click)="updateBook(book.id)"
+            class="btn btn--save"
+            type="submit"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn--icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+              />
+            </svg>
+            <p class="btn--text">Save</p>
+          </button>
+
+          <button (click)="clearForm()" class="btn btn--clear" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn--icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+              />
+            </svg>
+            <p class="btn--text">Clear</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

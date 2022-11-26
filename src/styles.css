@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary: rgba(182, 36, 79, 0.9);
+  --secondary: #fff;
+  --shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  --border-radius: 12px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1036px;
+  margin: 0 auto;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: "Quicksand", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary);
+  border-radius: var(--border-radius);
+  color: black;
+  box-shadow: var(--shadow);
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .title h1 {
+  font-size: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav__list--item {
+  background-color: var(--primary);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  color: var(--secondary);
+  font-weight: 600;
+  transition: transform 150ms ease;
+  box-shadow: var(--shadow);
+}
+
+.nav__list--item:hover {
+  transform: translateY(-5px);
+}
+
+.nav__list--link {
+  font-size: 1.2rem;
+}
+
+.btn {
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 3px;
+  color: white;
+  transition: transform 150ms ease;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.btn svg {
+  width: 1.2rem;
+  aspect-ratio: 1 / 1;
+}
+
+.btn p {
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.backbtn {
+  display: inline-block;
+  padding: 1rem 0.5rem;
+}
+
+.backbtn div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--primary);
+  transition: transform ease 250ms;
+  cursor: pointer;
+}
+
+.backbtn div:hover {
+  transform: translateX(-5px);
+}
+
+.backbtn div svg {
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+}
+
+.spinner__container {
+  padding: 2rem;
+}
