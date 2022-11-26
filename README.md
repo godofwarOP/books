@@ -7,7 +7,7 @@ Install Node.js [Link](https://nodejs.org/en/)
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/godofwarOP/books.git
 ```
 
 Go to the project directory
